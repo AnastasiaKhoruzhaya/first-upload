@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>твоей прекрасной юности момент!</title>
+    <link rel="stylesheet" type="text/css" href="Style.css">
+</head>
+<body background="небо2.jpg">
+	<center>
+		<div id="Box">
+            <br><h1><span style="background: #BA55D3">Хоружая Анастасия Сергеевна</span> начинает изучать HTML5!</h1>
+		<video id="Video" src="videoplayback.mp4" width="400" height="300" controls="controls"></video>
+		<br><br><br><audio id="Audio" src="muzlome_The_Strumbellas_-_Spirits_48226464.mp3" controls="controls"> </audio>
+		<br><br><b><p>Для считывания координат нажмите на кнопку:</p></b>
+		<input id="Button" type="button" value="Координаты" onclick="getCoordinates()">
+		</div>
+	</center>
+	<script type="text/javascript">
+			function getCoordinates()
+			{		
+				navigator.geolocation.getCurrentPosition(showCoordinates);
+			}
+			function showCoordinates(position) 
+			{		
+				document.write("Широта:" + position.coords.latitude + "<br/>");		
+				document.write("Долгота:" + position.coords.longitude);		
+			}
+		</script>
+</body>
+</html>
